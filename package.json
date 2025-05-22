@@ -1,0 +1,23 @@
+{
+  "name": "artoriastools",
+  "version": "1.0.0",
+  "description": "A cools set of tools",
+  "main": "main.js",
+  "scripts": {
+    "test": "test",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Etheriouse/ArtoriasTools.git"
+  },
+  "author": "Liayel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Etheriouse/ArtoriasTools/issues"
+  },
+  "homepage": "https://github.com/Etheriouse/ArtoriasTools#readme",
+  "devDependencies": {
+    "electron": "^36.2.1"
+  }
+}
