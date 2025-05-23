@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barre Latérale VSCode</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+        }
+
+        #sidebar {
+            width: 50px;
+            background-color: #252526;
+            color: #ccc;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            border-right: 1px solid #1e1e1e;
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            margin: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon:hover {
+            color: #fff;
+        }
+
+        .icon-selected {
+            color: #fff;
+            border-left: 2px solid #fff;
+            padding-left: 2px;
+        }
+
+        #content {
+            flex: 1;
+            background-color: #1e1e1e;
+            color: #ccc;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="sidebar">
+        <div class="icon icon-selected">
+            <!-- Utilisation d'icônes de texte pour simplifier -->
+            <span>📁</span>
+        </div>
+        <div class="icon">
+            <span>🔍</span>
+        </div>
+        <div class="icon ">
+            <span>🛠</span>
+        </div>
+        <div class="icon">
+            <span>🐞</span>
+        </div>
+    </div>
+    <div id="content">
+        <h1>Contenu Principal</h1>
+        <p>Bienvenue dans votre espace de travail.</p>
+    </div>
+</body>
+</html>

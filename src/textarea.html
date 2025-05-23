@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <script type="module" src="renderer.js"></script>
+    <div id="tab-bar">
+        <div id="add-tab">
+            <div>
+                <img src="../assets/icons/+.png" class="plus">
+            </div>
+        </div>
+
+    </div>
+
+    <div id="tab-body">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <div id="text">
+            <div id="input-markdown">
+                <textarea>
+        # Title 1 
+        
+        - hello
+        
+        ## Title 2
+        ### title 3
+            </textarea>
+            </div>
+            <div id="preview-markdown">
+                title
+            </div>
+        </div>
+        <div id="draw">
+
+        </div>
+    </div>
+
+
+    <style>
+        html {
+            height: 100%;
+            overflow-y: hidden;
+        }
+
+        body {
+            height: 100%;
+        }
+
+        #tab-body {
+            margin-top: 5px;
+            height: calc(100vh - 65px);
+        }
+
+        #text {
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+        }
+
+        #input-markdown {
+            width: 100%;
+        }
+
+        #input-markdown>textarea {
+            overflow-y: auto;
+            border: none;
+            width: 100%;
+            height: 100%;
+        }
+
+        #input-markdown>textarea::-webkit-scrollbar {
+            width: 5px;
+            /* Largeur de la barre de défilement */
+        }
+
+        #input-markdown>textarea::-webkit-scrollbar-thumb {
+            background: #efefef;
+            /* Couleur du "pouce" de la barre de défilement */
+            border-radius: 3px;
+            /* Rayon de la bordure du "pouce" */
+        }
+
+        #input-markdown>textarea::-webkit-scrollbar-thumb:hover {
+            background: #919191;
+            /* Couleur du "pouce" de la barre de défilement au survol */
+        }
+
+        #input-markdown>textarea:focus {
+            outline: none;
+
+        }
+
+        #preview-markdown {
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+    </style>
+
+</body>
+
+</html>

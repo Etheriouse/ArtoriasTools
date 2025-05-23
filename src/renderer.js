@@ -1,7 +1,10 @@
-import * as tabs from './tabs.js'
+//import * as tabs from './tabs.js'
+import * as menus from './menus.js'
 
-tabs._add_tab("Yuzu Compiler");
-tabs._add_tab("Clipboard");
-tabs._add_tab("Dashboard");
-tabs._add_tab("White board");
-tabs._add_tab("Artorias");
+document.getElementById('tools-selector').childNodes.forEach(element => {
+    element.addEventListener('click', () => {
+        menus.select_icon(element);
+        
+        menus.loadmenu(element.childNodes[3].innerHTML);
+    })
+})

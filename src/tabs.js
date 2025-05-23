@@ -1,10 +1,6 @@
 const tabs = [];
 const deleted_tab = []; // max 10;
 
-document.getElementById('add-tab').addEventListener('click', () => {
-    _add_tab("Clipboard");
-})
-
 function _sub_tab(element) {
     const tab_bar = document.getElementById('tab-bar');
     tab_bar.removeChild(element);
