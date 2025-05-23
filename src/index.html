@@ -68,24 +68,69 @@
     </div>
 
     <div id="main-app">
-        <!-- <div id="tab-bar">
-            <div id="add-tab">
-                <div>
-                    <img src="../assets/icons/+.png" class="plus">
-                </div>
+        <div id="global-log">
+            <h1>Global input log: </h1>
+            <div>
+                <h2 id="log-key">Keyboard: </h2>
+                <h2 id="log-mouse">Mouse: </h2>
             </div>
+        </div>
+        <div id="detailled-log">
+            <div id="detailled-key">
+
+            </div>
+
+            <div id="detailled-mouse">
+                
+            </div>
+            <button id="update-button">Update</button>
         </div>
 
         <style>
+            #main-app {
+                overflow-y: auto;
+            }
+
+            #global-log > div {
+                display: flex;
+                flex-direction: row;
+            }
+
+            #global-log > div > h2 {
+                margin-right: 45px;
+            }
         </style>
+        <script>
+            const key = [];
+            window.addEventListener('click', e => {
+                console.log(e);
+            })
+            window.addEventListener('keydown', e => {
+                if(!key[e.keyCode]) {
+                    key[e.keyCode] = {name: e.key, number: 1};
+                }
+                key[e.keyCode].number++;
+                
+            })
 
-        <div id="tab-content">
+            document.getElementById('update-button').addEventListener('click', () => {
+                const log = document.getElementById('detailled-key');
+                log.childNodes.forEach(rev => {
+                    log.removeChild(rev);
+                })
+                const lu = document.createElement('ul');
+                key.forEach(element => {
+                    let li = document.createElement('li');
+                    li.innerHTML = element.name + ": " + element.number;
+                    lu.appendChild(li)
+                })
+                log.appendChild(lu);
+            })
 
-        </div> -->
-
+        </script>
     </div>
-    <script type="module" src="renderer.js"></script>
 
+    <script type="module" src="renderer.js"></script>
 </body>
 
 </html>
